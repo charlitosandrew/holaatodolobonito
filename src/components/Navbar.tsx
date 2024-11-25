@@ -13,12 +13,17 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-slate-800/90 backdrop-blur-sm fixed w-full z-50">
+    <motion.nav
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ type: "spring", stiffness: 100, damping: 20 }}
+      className="bg-slate-800/90 backdrop-blur-sm fixed w-full z-50"
+    >
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-2">
             <motion.div
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.1, rotate: 10 }}
               whileTap={{ scale: 0.95 }}
               className="w-10 h-10"
             >
@@ -50,6 +55,7 @@ const Navbar = () => {
                   <motion.div
                     className="absolute -bottom-1 left-0 right-0 h-0.5 bg-cyan-300"
                     layoutId="underline"
+                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
                   />
                 )}
               </Link>
@@ -57,7 +63,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
