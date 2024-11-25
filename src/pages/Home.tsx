@@ -68,7 +68,7 @@ const Home = () => {
               <motion.div
                 initial={{ scale: 0.8, opacity: 0.5 }}
                 animate={{
-                  scale: [0.8, 2.5],
+                  scale: [0.8, 2.3],
                   opacity: [0.5, 0],
                 }}
                 transition={{ duration: 1.2, ease: "easeOut" }}
